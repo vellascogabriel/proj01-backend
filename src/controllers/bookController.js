@@ -25,6 +25,7 @@ class BookController{
         const books = await Book.find();
 
         return res.json(books)
+        
     }catch(err){
         return res.json({message: err})
     }
@@ -39,9 +40,8 @@ class BookController{
             res.json(removedBook)
         
             }catch(err){
-                res.json({message:error});
+                res.json({message:err});
             }
-
     }
 }
 
